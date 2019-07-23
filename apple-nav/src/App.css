@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  
 }
 
 .App-logo {
@@ -30,4 +31,22 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+
+.appleNav {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: #333333;
+  
+}
+
+.navSection {
+  max-width: 1000px;
+  width: 100%;
+  margin: auto;
+  display: flex;
+  justify-content: space-evenly;
+
 }
