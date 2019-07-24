@@ -3,14 +3,15 @@ import React from "react";
 
 
 
-function Subnav(AppleData) {
-    console.log(AppleData)
+function Subnav(props) {
+    const array = props.subNav || [''];
+    console.log(array)
     return (
-        <div className = "appleNav">
-            <div className ="navSection">
-                {AppleData.map(data => {
-                    return <span key ={data.type}>{data.type}</span>
-                })}
+        <div className = "subNav">
+            <div className ="subNavSection">
+                {array.map(data => 
+                    <div key ={data}>{data}</div>
+                )}
             </div>
                 
         </div>

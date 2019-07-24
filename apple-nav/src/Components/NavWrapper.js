@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import { AppleData } from "./data.js"
 import Subnav from "./Subnav.js";
-import { Route} from "react-router-dom";
+import { Route, Link} from "react-router-dom";
 
 
 
@@ -15,7 +15,8 @@ function NavWrapper() {
         <div className = "appleNav">
             <div className ="navSection">
                 {AppleData.map(data => {
-                    return <img key ={data.name} src={data.name} alt = {data.name} onClick = {() => setSubNav(data.type)} />
+                    return <Link to={`/${data.id}`}> <img key ={data.id} src={data.name} 
+                    alt = {data.name} onClick = {() => setSubNav(data.type)} /></Link>
                 })}
             </div>
                 <Route path="/:device/" render ={ props => {
